@@ -13,7 +13,7 @@ bc.env_vars = ['TEST_BIGDATA=https://bytesalad.stsci.edu/artifactory',
 bc.conda_channels = ['http://ssb.stsci.edu/astroconda']
 bc.conda_packages = ['python<=3.5',
                      'requests',
-                     'numpy',
+                     'numpy>1.14,!=1.15.3',
                      'matplotlib',
                      'scipy',
                      'scikit-image',

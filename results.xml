@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?><testsuite errors="0" failures="6" name="pytest" skips="0" tests="6" time="0.245"><testcase classname="acstools.tests.test_wfc_destripe.TestDestripe" file="acstools/tests/test_wfc_destripe.py" line="35" name="test_generic[jb5g05ubq]" time="0.0022211074829101562"><failure message="ci_watson.artifactory_helpers.BigdataError: Environment variable TEST_BIGDATA is undefined">self = &lt;acstools.tests.test_wfc_destripe.TestDestripe object at 0x11f675f28&gt;
+rootname = &apos;jb5g05ubq&apos;
+
+    @pytest.mark.parametrize(
+        &apos;rootname&apos;, [&apos;jb5g05ubq&apos;, &apos;ja0x03ojq&apos;, &apos;jc5001soq&apos;])
+    def test_generic(self, rootname):
+        &quot;&quot;&quot;
+            Run de-striping tests on calibrated post-SM4 WFC full-frame
+            exposures without masks.
+            &quot;&quot;&quot;
+        out_sfx = &apos;destripe&apos;
+        flt_file = rootname + &apos;_flt.fits&apos;
+        out_file = rootname + &apos;_flt_&apos; + out_sfx + &apos;.fits&apos;
+        ref_file = rootname + &apos;_flt_ref.fits&apos;
+    
+&gt;       self._destripe_one(flt_file, out_sfx, out_file, ref_file)
+
+../../acstools/tests/test_wfc_destripe.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+../../acstools/tests/test_wfc_destripe.py:17: in _destripe_one
+    self.get_input_file(inputfile)
+../../acstools/tests/helpers.py:128: in get_input_file
+    filename)
+../../../../miniconda3/envs/pytest/lib/python3.6/site-packages/ci_watson/artifactory_helpers.py:109: in get_bigdata
+    src = os.path.join(get_bigdata_root(), *args)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+envkey = &apos;TEST_BIGDATA&apos;
+
+    def get_bigdata_root(envkey=&apos;TEST_BIGDATA&apos;):
+        &quot;&quot;&quot;
+        Find and returns the path to the nearest big datasets.
+        &quot;&quot;&quot;
+        if envkey not in os.environ:
+            raise BigdataError(
+&gt;               &apos;Environment variable {} is undefined&apos;.format(envkey))
+E           ci_watson.artifactory_helpers.BigdataError: Environment variable TEST_BIGDATA is undefined
+
+../../../../miniconda3/envs/pytest/lib/python3.6/site-packages/ci_watson/artifactory_helpers.py:67: BigdataError</failure></testcase><testcase classname="acstools.tests.test_wfc_destripe.TestDestripe" file="acstools/tests/test_wfc_destripe.py" line="35" name="test_generic[ja0x03ojq]" time="0.001409769058227539"><failure message="ci_watson.artifactory_helpers.BigdataError: Environment variable TEST_BIGDATA is undefined">self = &lt;acstools.tests.test_wfc_destripe.TestDestripe object at 0x11f6de0f0&gt;
+rootname = &apos;ja0x03ojq&apos;
+
+    @pytest.mark.parametrize(
+        &apos;rootname&apos;, [&apos;jb5g05ubq&apos;, &apos;ja0x03ojq&apos;, &apos;jc5001soq&apos;])
+    def test_generic(self, rootname):
+        &quot;&quot;&quot;
+            Run de-striping tests on calibrated post-SM4 WFC full-frame
+            exposures without masks.
+            &quot;&quot;&quot;
+        out_sfx = &apos;destripe&apos;
+        flt_file = rootname + &apos;_flt.fits&apos;
+        out_file = rootname + &apos;_flt_&apos; + out_sfx + &apos;.fits&apos;
+        ref_file = rootname + &apos;_flt_ref.fits&apos;
+    
+&gt;       self._destripe_one(flt_file, out_sfx, out_file, ref_file)
+
+../../acstools/tests/test_wfc_destripe.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+../../acstools/tests/test_wfc_destripe.py:17: in _destripe_one
+    self.get_input_file(inputfile)
+../../acstools/tests/helpers.py:128: in get_input_file
+    filename)
+../../../../miniconda3/envs/pytest/lib/python3.6/site-packages/ci_watson/artifactory_helpers.py:109: in get_bigdata
+    src = os.path.join(get_bigdata_root(), *args)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+envkey = &apos;TEST_BIGDATA&apos;
+
+    def get_bigdata_root(envkey=&apos;TEST_BIGDATA&apos;):
+        &quot;&quot;&quot;
+        Find and returns the path to the nearest big datasets.
+        &quot;&quot;&quot;
+        if envkey not in os.environ:
+            raise BigdataError(
+&gt;               &apos;Environment variable {} is undefined&apos;.format(envkey))
+E           ci_watson.artifactory_helpers.BigdataError: Environment variable TEST_BIGDATA is undefined
+
+../../../../miniconda3/envs/pytest/lib/python3.6/site-packages/ci_watson/artifactory_helpers.py:67: BigdataError</failure></testcase><testcase classname="acstools.tests.test_wfc_destripe.TestDestripe" file="acstools/tests/test_wfc_destripe.py" line="35" name="test_generic[jc5001soq]" time="0.0013091564178466797"><failure message="ci_watson.artifactory_helpers.BigdataError: Environment variable TEST_BIGDATA is undefined">self = &lt;acstools.tests.test_wfc_destripe.TestDestripe object at 0x11f7060f0&gt;
+rootname = &apos;jc5001soq&apos;
+
+    @pytest.mark.parametrize(
+        &apos;rootname&apos;, [&apos;jb5g05ubq&apos;, &apos;ja0x03ojq&apos;, &apos;jc5001soq&apos;])
+    def test_generic(self, rootname):
+        &quot;&quot;&quot;
+            Run de-striping tests on calibrated post-SM4 WFC full-frame
+            exposures without masks.
+            &quot;&quot;&quot;
+        out_sfx = &apos;destripe&apos;
+        flt_file = rootname + &apos;_flt.fits&apos;
+        out_file = rootname + &apos;_flt_&apos; + out_sfx + &apos;.fits&apos;
+        ref_file = rootname + &apos;_flt_ref.fits&apos;
+    
+&gt;       self._destripe_one(flt_file, out_sfx, out_file, ref_file)
+
+../../acstools/tests/test_wfc_destripe.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+../../acstools/tests/test_wfc_destripe.py:17: in _destripe_one
+    self.get_input_file(inputfile)
+../../acstools/tests/helpers.py:128: in get_input_file
+    filename)
+../../../../miniconda3/envs/pytest/lib/python3.6/site-packages/ci_watson/artifactory_helpers.py:109: in get_bigdata
+    src = os.path.join(get_bigdata_root(), *args)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+envkey = &apos;TEST_BIGDATA&apos;
+
+    def get_bigdata_root(envkey=&apos;TEST_BIGDATA&apos;):
+        &quot;&quot;&quot;
+        Find and returns the path to the nearest big datasets.
+        &quot;&quot;&quot;
+        if envkey not in os.environ:
+            raise BigdataError(
+&gt;               &apos;Environment variable {} is undefined&apos;.format(envkey))
+E           ci_watson.artifactory_helpers.BigdataError: Environment variable TEST_BIGDATA is undefined
+
+../../../../miniconda3/envs/pytest/lib/python3.6/site-packages/ci_watson/artifactory_helpers.py:67: BigdataError</failure></testcase><testcase classname="acstools.tests.test_wfc_destripe.TestDestripe" file="acstools/tests/test_wfc_destripe.py" line="49" name="test_fullframe_flashed" time="0.0012059211730957031"><failure message="ci_watson.artifactory_helpers.BigdataError: Environment variable TEST_BIGDATA is undefined">self = &lt;acstools.tests.test_wfc_destripe.TestDestripe object at 0x11f6def28&gt;
+
+    def test_fullframe_flashed(self):
+        &quot;&quot;&quot;
+            Run de-striping test on semi-calibrated post-SM4 WFC full-frame
+            with post-flash.
+            &quot;&quot;&quot;
+        rootname = &apos;jc2z03cvq&apos;
+        out_sfx  = &apos;destripe&apos;
+        flt_file = rootname + &apos;_blv_tmp.fits&apos;
+        out_file = rootname + &apos;_blv_tmp_&apos; + out_sfx + &apos;.fits&apos;
+        ref_file = rootname + &apos;_blv_tmp_ref.fits&apos;
+    
+&gt;       self._destripe_one(flt_file, out_sfx, out_file, ref_file)
+
+../../acstools/tests/test_wfc_destripe.py:61: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+../../acstools/tests/test_wfc_destripe.py:17: in _destripe_one
+    self.get_input_file(inputfile)
+../../acstools/tests/helpers.py:128: in get_input_file
+    filename)
+../../../../miniconda3/envs/pytest/lib/python3.6/site-packages/ci_watson/artifactory_helpers.py:109: in get_bigdata
+    src = os.path.join(get_bigdata_root(), *args)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+envkey = &apos;TEST_BIGDATA&apos;
+
+    def get_bigdata_root(envkey=&apos;TEST_BIGDATA&apos;):
+        &quot;&quot;&quot;
+        Find and returns the path to the nearest big datasets.
+        &quot;&quot;&quot;
+        if envkey not in os.environ:
+            raise BigdataError(
+&gt;               &apos;Environment variable {} is undefined&apos;.format(envkey))
+E           ci_watson.artifactory_helpers.BigdataError: Environment variable TEST_BIGDATA is undefined
+
+../../../../miniconda3/envs/pytest/lib/python3.6/site-packages/ci_watson/artifactory_helpers.py:67: BigdataError</failure></testcase><testcase classname="acstools.tests.test_wfc_destripe.TestDestripe" file="acstools/tests/test_wfc_destripe.py" line="62" name="test_fullframe_masked" time="0.001271963119506836"><failure message="ci_watson.artifactory_helpers.BigdataError: Environment variable TEST_BIGDATA is undefined">self = &lt;acstools.tests.test_wfc_destripe.TestDestripe object at 0x11f7067b8&gt;
+
+    def test_fullframe_masked(self):
+        &quot;&quot;&quot;
+            Run de-striping tests on calibrated post-SM4 WFC full-frame
+            exposures with masks.
+            &quot;&quot;&quot;
+        rootname = &apos;jc8o04ghq&apos;
+        out_sfx  = &apos;destripe&apos;
+        flt_file = rootname + &apos;_flt.fits&apos;
+        out_file = rootname + &apos;_flt_&apos; + out_sfx + &apos;.fits&apos;
+        ref_file = rootname + &apos;_flt_ref.fits&apos;
+        mask_files = [&apos;{0}_mask{1}.fits&apos;.format(rootname, i + 1)
+                      for i in range(2)]
+    
+        self._destripe_one(flt_file, out_sfx, out_file, ref_file,
+&gt;                          masks=mask_files)
+
+../../acstools/tests/test_wfc_destripe.py:77: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+../../acstools/tests/test_wfc_destripe.py:17: in _destripe_one
+    self.get_input_file(inputfile)
+../../acstools/tests/helpers.py:128: in get_input_file
+    filename)
+../../../../miniconda3/envs/pytest/lib/python3.6/site-packages/ci_watson/artifactory_helpers.py:109: in get_bigdata
+    src = os.path.join(get_bigdata_root(), *args)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+envkey = &apos;TEST_BIGDATA&apos;
+
+    def get_bigdata_root(envkey=&apos;TEST_BIGDATA&apos;):
+        &quot;&quot;&quot;
+        Find and returns the path to the nearest big datasets.
+        &quot;&quot;&quot;
+        if envkey not in os.environ:
+            raise BigdataError(
+&gt;               &apos;Environment variable {} is undefined&apos;.format(envkey))
+E           ci_watson.artifactory_helpers.BigdataError: Environment variable TEST_BIGDATA is undefined
+
+../../../../miniconda3/envs/pytest/lib/python3.6/site-packages/ci_watson/artifactory_helpers.py:67: BigdataError</failure></testcase><testcase classname="acstools.tests.test_wfc_satdet.TestSatDet" file="acstools/tests/test_wfc_satdet.py" line="15" name="test_trail_mask" time="0.0014379024505615234"><failure message="ci_watson.artifactory_helpers.BigdataError: Environment variable TEST_BIGDATA is undefined">self = &lt;acstools.tests.test_wfc_satdet.TestSatDet object at 0x11f6e4cc0&gt;
+
+    def test_trail_mask(self):
+        &quot;&quot;&quot;Mask satellite trail on WFC EXT 6.&quot;&quot;&quot;
+    
+        rootname = &apos;jc8m10syq&apos;
+        inputfile = rootname + &apos;_flc.fits&apos;  # This is modified in-place
+        truthfile = rootname + &apos;_flc_ref.fits&apos;
+    
+        # Prepare input file.
+        get_bigdata(&apos;scsb-acstools&apos;, self.env, self.detector, &apos;input&apos;,
+&gt;                   inputfile)
+
+../../acstools/tests/test_wfc_satdet.py:25: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+../../../../miniconda3/envs/pytest/lib/python3.6/site-packages/ci_watson/artifactory_helpers.py:109: in get_bigdata
+    src = os.path.join(get_bigdata_root(), *args)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+envkey = &apos;TEST_BIGDATA&apos;
+
+    def get_bigdata_root(envkey=&apos;TEST_BIGDATA&apos;):
+        &quot;&quot;&quot;
+        Find and returns the path to the nearest big datasets.
+        &quot;&quot;&quot;
+        if envkey not in os.environ:
+            raise BigdataError(
+&gt;               &apos;Environment variable {} is undefined&apos;.format(envkey))
+E           ci_watson.artifactory_helpers.BigdataError: Environment variable TEST_BIGDATA is undefined
+
+../../../../miniconda3/envs/pytest/lib/python3.6/site-packages/ci_watson/artifactory_helpers.py:67: BigdataError</failure></testcase></testsuite>
