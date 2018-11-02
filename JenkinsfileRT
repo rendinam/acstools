@@ -1,4 +1,4 @@
-@Library('utils@pkg-escape') _
+@Library('utils@condastrings') _
 
 // Obtain files from source control system.
 // [skip ci] and [ci skip] have no effect here.
