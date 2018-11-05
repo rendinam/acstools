@@ -5,7 +5,7 @@
 if (utils.scm_checkout(['skip_disable':true])) return
 
 // Run nightly tests, which include the slow ones.
-bc = new BuildConfig()
+bc0 = new BuildConfig()
 bc0.nodetype = "RHEL-6"
 bc0.name = "release"
 bc0.env_vars = ['TEST_BIGDATA=https://bytesalad.stsci.edu/artifactory',
