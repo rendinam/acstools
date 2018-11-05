@@ -6,12 +6,12 @@ if (utils.scm_checkout(['skip_disable':true])) return
 
 // Run nightly tests, which include the slow ones.
 bc = new BuildConfig()
-bc.nodetype = "RHEL-6"
-bc.name = "release"
-bc.env_vars = ['TEST_BIGDATA=https://bytesalad.stsci.edu/artifactory',
+bc0.nodetype = "RHEL-6"
+bc0.name = "release"
+bc0.env_vars = ['TEST_BIGDATA=https://bytesalad.stsci.edu/artifactory',
                'jref=/grp/hst/cdbs/jref/']
-bc.conda_channels = ['http://ssb.stsci.edu/astroconda']
-bc.conda_packages = ['python=3.6',
+bc0.conda_channels = ['http://ssb.stsci.edu/astroconda']
+bc0.conda_packages = ['python=3.6',
                      'requests',
                      'numpy',
                      'matplotlib',
@@ -19,11 +19,11 @@ bc.conda_packages = ['python=3.6',
                      'scikit-image',
                      'stsci.tools',
                      'ci-watson']
-bc.build_cmds = ["python setup.py install"]
-//bc.test_cmds = ["pytest --basetemp=tests_output --junitxml results.xml --bigdata --slow -v"]
-bc.test_cmds = ["pytest --basetemp=tests_output --junitxml results.xml -v"]
-bc.failedUnstableThresh = 1
-bc.failedFailureThresh = 6
+bc0.build_cmds = ["python setup.py install"]
+//bc0.test_cmds = ["pytest --basetemp=tests_output --junitxml results.xml --bigdata --slow -v"]
+bc0.test_cmds = ["pytest --basetemp=tests_output --junitxml results.xml -v"]
+bc0.failedUnstableThresh = 1
+bc0.failedFailureThresh = 6
 
 // Astropy dev and Python 3.7
 bc1 = utils.copy(bc)
@@ -35,4 +35,5 @@ bc1.build_cmds = ["pip install git+https://github.com/astropy/astropy.git#egg=as
 
 // Iterate over configurations that define the (distributed) build matrix.
 // Spawn a host (or workdir) for each combination and run in parallel.
-utils.run([bc, bc1])
+//utils.run([bc0, bc1])
+utils.run([bc0])
