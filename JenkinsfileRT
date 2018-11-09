@@ -35,5 +35,4 @@ bc1.build_cmds = ["pip install git+https://github.com/astropy/astropy.git#egg=as
 
 // Iterate over configurations that define the (distributed) build matrix.
 // Spawn a host (or workdir) for each combination and run in parallel.
-//utils.run([bc0, bc1])
-utils.run([bc0])
+utils.run([bc0, bc1])
