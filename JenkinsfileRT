@@ -4,6 +4,9 @@
 // [skip ci] and [ci skip] have no effect here.
 if (utils.scm_checkout(['skip_disable':true])) return
 
+jobconfig = new JobConfig()
+jobconfig.all_posts_in_same_issue = true
+
 // Run nightly tests, which include the slow ones.
 bc0 = new BuildConfig()
 bc0.nodetype = "RHEL-6"
