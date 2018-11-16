@@ -4,8 +4,8 @@
 // [skip ci] and [ci skip] have no effect here.
 if (utils.scm_checkout(['skip_disable':true])) return
 
-//jobconfig = new JobConfig()
-//jobconfig.all_posts_in_same_issue = true
+jobconfig = new JobConfig()
+jobconfig.all_posts_in_same_issue = true
 
 // Run nightly tests, which include the slow ones.
 bc0 = new BuildConfig()
@@ -38,4 +38,4 @@ bc1.build_cmds = ["pip install git+https://github.com/astropy/astropy.git#egg=as
 
 // Iterate over configurations that define the (distributed) build matrix.
 // Spawn a host (or workdir) for each combination and run in parallel.
-utils.run([bc0, bc1])
+utils.run([jobconfig, bc0, bc1])
