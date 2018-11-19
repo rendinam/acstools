@@ -5,7 +5,7 @@
 if (utils.scm_checkout(['skip_disable':true])) return
 
 jobconfig = new JobConfig()
-//jobconfig.post_rt_summary = true
+jobconfig.post_rt_summary = true
 
 // Run nightly tests, which include the slow ones.
 bc0 = new BuildConfig()
