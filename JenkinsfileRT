@@ -1,4 +1,4 @@
-@Library('utils@notify-fix-2') _
+@Library('utils@better_threshholds') _
 
 // Obtain files from source control system.
 // [skip ci] and [ci skip] have no effect here.
