@@ -27,8 +27,8 @@ bc.conda_packages = ['python=3.6',
 bc.build_cmds = ["python setup.py install"]
 bc.test_cmds = ["pytest --basetemp=tests_output --junitxml results.xml --bigdata --slow -v"]
 //bc.test_cmds = [["pytest --basetemp=tests_output --junitxml results.xml --bigdata --slow -v",'ignore_status']]
-bc.failedUnstableThresh = 1
-bc.failedFailureThresh = 6
+//bc.failedUnstableThresh = 1
+//bc.failedFailureThresh = 6
 
 // Astropy dev and Python 3.7
 bc1 = utils.copy(bc)
