@@ -1,3 +1,5 @@
+@Library('utils@better_threshholds') _
+
 // Obtain files from source control system.
 // [skip ci] and [ci skip] have no effect here.
 if (utils.scm_checkout(['skip_disable':true])) return
@@ -24,8 +26,8 @@ bc.conda_packages = ['python=3.6',
                      'ci-watson']
 bc.build_cmds = ["python setup.py install"]
 bc.test_cmds = ["pytest --basetemp=tests_output --junitxml results.xml --bigdata --slow -v"]
-bc.failedUnstableThresh = 1
-bc.failedFailureThresh = 6
+//bc.failedUnstableThresh = 1
+//bc.failedFailureThresh = 6
 
 // Astropy dev and Python 3.7
 bc1 = utils.copy(bc)
